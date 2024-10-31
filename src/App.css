@@ -36,3 +36,174 @@
     transform: rotate(360deg);
   }
 }
+
+
+:root{
+  color-scheme: only dark;
+  --cui-form-check-label-color: white;
+}
+
+body {
+  text-align: center;
+  color:white;
+  background-color: rgb(25, 25, 27) !important; 
+  width: 100dvw;
+  height: 100dvh;
+  margin: 0px;
+}
+
+body{
+  max-width: 100dvw;
+  width: 100%;
+}
+
+.login-block{
+  color:white;
+  border-radius: 25px;
+  outline: 3px solid rgb(44, 44, 48);
+  
+}
+
+
+
+.fullpage-center{
+  display: flex;
+  width: 100dvw;
+  height: 100dvh;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.fullpage-center-vertical{
+  display: flex;
+  width: 100dvw;
+  min-height: 100dvh;
+  align-items: center;
+  flex-direction: column;
+}
+
+.spinner-container {
+  position: relative;
+  width: 100px;
+  height: 100px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: spin 1s ease-in-out infinite;
+}
+
+.spinner-container > div {
+  width: 100%;
+  height: 100%;
+  border-color: white transparent white transparent;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 10px;
+  box-sizing: border-box;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.input-group > .input-group-text{
+  font-family: "Segoe UI Symbol", monospace;
+}
+
+@media(orientation: landscape){
+.nav-dropdown{
+  display: none;
+}
+}
+@media(orientation: portrait){
+  .nav-links{
+    display: none;
+  }
+}
+.posts{
+  margin-top: 1rem;
+  width: 800px;
+  max-width: 99dvw;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+select > option{
+   background-color: black;
+}
+
+.form-check-label{
+  color:white;
+}
+
+.users-container > div{
+  text-align: center;
+  border: 2px solid rgb(45, 45, 49);
+}
+
+.punishments-container > div{
+  text-align: center;
+  border: 2px solid rgb(90, 90, 99);
+  align-content: center;
+}
+.punishments-container > div > p {
+  margin: 0;
+}
+.users-container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "users-userid users-username users-username users-username"
+    "users-actions users-actions users-actions users-actions"
+    "users-createdat users-createdat users-lastvisitat users-lastvisitat";
+    border: 2px solid rgb(45, 45, 49);
+    border-radius: 5px;
+}
+
+.users-userid { grid-area: users-userid; }
+
+.users-actions { grid-area: users-actions; }
+
+.users-createdat { grid-area: users-createdat; }
+
+.users-lastvisitat { grid-area: users-lastvisitat; }
+
+.users-username { grid-area: users-username; }
+
+.punishments-container {  
+  border: 2px solid rgb(45, 45, 49);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "punishment-id punishment-reason punishment-reason punishment-active"
+    "punishment-by punishment-by punishment-actions punishment-actions"
+    "punishment-created-at punishment-created-at punishment-expires-at punishment-expires-at";
+}
+
+.punishment-id { grid-area: punishment-id; }
+
+.punishment-reason { grid-area: punishment-reason; }
+
+.punishment-active { grid-area: punishment-active; }
+
+.punishment-actions { grid-area: punishment-actions; }
+
+.punishment-by { grid-area: punishment-by; }
+
+.punishment-created-at { grid-area: punishment-created-at; }
+
+.punishment-expires-at { grid-area: punishment-expires-at; }
